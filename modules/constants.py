@@ -2,6 +2,10 @@
 #
 # Contains the constant values for the various parts of the pilight script
 
+# the delay for the main loop
+#
+delay = 0.25
+
 # GPIO pin numbers
 #
 redButton   = 1
