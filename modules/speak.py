@@ -47,3 +47,14 @@ def sayLightInstructions():
 	for t in text:
 		say(t)
 
+def sayButtonInstructions():
+	text = [
+		"Great. Thank you, "+childsName,
+		"Now I'll tell you what the buttons do.",
+		"When you press the black button, I'll tell you what time it is.",
+		"When you press the red button, I'll surprise you with something fun.",
+		"Try it now!"
+	]
+
+	for t in text:
+		say(t)
