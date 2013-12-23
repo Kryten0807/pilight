@@ -13,7 +13,6 @@ def checkButton(b):
 	#
 	return False;
 
-
 def getLastButtonPress():
 	# does the file 'storage/lastButtonPress' exist? if not, return 0
 	#
