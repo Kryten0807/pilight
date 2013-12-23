@@ -34,6 +34,7 @@ def tellJoke():
 	say("Here's a joke for you, "+childsName+".")
 
 	# tell the first part of the joke
+	# @todo
 	#
 
 	# wait a moment
@@ -41,5 +42,19 @@ def tellJoke():
 	time.sleep(3)
 
 	# tell the answer
+	# @todo
+	#
+
+
+def giveWeatherReport():
+	# get the weather giveWeatherReport
+	# @todo
+	#
+
+	# parse the result into a simple readable version
+	# @todo
+	#
+
+	# say the weather report
 	#
 
