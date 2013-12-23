@@ -43,7 +43,7 @@ Here's some pseudocode describing the flow of the script:
 		checkLights()
 		// Handle the buttons
 		//
-		if( checkButton(red) || checkButton(black) ):
+		if( checkButton(red) or checkButton(black) ):
 			// when was the last button pressed? if more than two hours ago,
 			// then say the appropriate greeting
 			//
