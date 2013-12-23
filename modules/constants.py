@@ -24,3 +24,8 @@ import datetime
 greenLightOn  = datetime.time(7,0,0)
 yellowLightOn = datetime.time(6,30,0)
 redLightOn    = datetime.time(19,0,0)
+
+
+# the "inactivity" period, in seconds
+#
+inactiveTime = 2 * 3600;	# 2 hours
