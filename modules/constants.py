@@ -8,6 +8,15 @@ childsName = "Robert"
 
 
 
+
+# the delay for the main loop, in seconds
+#
+delay = 0.25			# 1/4 second
+
+# the timeout value for waits, in seconds
+#
+timeout = 10 * 60		# 10 minutes
+
 # GPIO pin numbers
 #
 redButton   = 1
