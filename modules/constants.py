@@ -2,9 +2,11 @@
 #
 # Contains the constant values for the various parts of the pilight script
 
-# the delay for the main loop
+# the child's name
 #
-delay = 0.25
+childsName = "Robert"
+
+
 
 # GPIO pin numbers
 #
