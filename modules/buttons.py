@@ -48,3 +48,18 @@ def secondsSinceLastButtonPress():
 	# return the difference
 	#
 	return t1 - t0
+
+def waitForAnyButton():
+	# a counter to stop the waiting if nothing happens
+	#
+	n = 0;
+
+	while n<timeout:
+		if( checkButton(redButton) or checkButton(blackButton) ):
+			return True
+
+		time.sleep(delay)
+
+		n = n + delay
+
+	return False
