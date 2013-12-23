@@ -13,7 +13,7 @@ execfile('modules/firstrun.py')
 execfile('modules/speak.py')
 
 
-sayButtonInstructions()
+sayCurrentTime()
 
 exit()
 
