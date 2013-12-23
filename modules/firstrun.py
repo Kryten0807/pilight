@@ -67,6 +67,6 @@ def introduction():
 
 	# play a song
 	#
-	playSong("itchy itchy goo")
+	playSong()
 
 
