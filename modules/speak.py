@@ -53,7 +53,7 @@ def sayButtonInstructions():
 		"Now I'll tell you what the buttons do.",
 		"When you press the black button, I'll tell you what time it is.",
 		"When you press the red button, I'll surprise you with something fun.",
-		"Try it now!"
+		"Try the red button now!"
 	]
 
 	for t in text:
