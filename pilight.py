@@ -1,6 +1,8 @@
 # The main loop
 
-use time
+import time
+from sys import exit
+
 
 # load the modules
 #
@@ -8,6 +10,12 @@ execfile('modules/constants.py')
 execfile('modules/lights.py')
 execfile('modules/buttons.py')
 execfile('modules/firstrun.py')
+execfile('modules/speak.py')
+
+
+sayButtonInstructions()
+
+exit()
 
 # start the loop
 #
