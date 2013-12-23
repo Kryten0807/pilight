@@ -1,4 +1,4 @@
-# Title
+# PiLight
 
 A Raspberry Pi powered visual alarm.
 
