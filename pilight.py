@@ -1,5 +1,7 @@
 # The main loop
 
+use time
+
 # load the modules
 #
 execfile('modules/constants.py')
