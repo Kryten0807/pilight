@@ -11,6 +11,13 @@ def say(text):
 	#
 	call([ "./scripts/speak", text ])
 
+def sayGreeting():
+	# say the greeting
+	# @todo make this more fun - personalized, based on time of day, etc.
+	#
+	say("Hello, "+childsName+".")
+	say("What would you like to do?")
+
 
 def sayIntroduction():
 	text = [
