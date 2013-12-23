@@ -79,4 +79,6 @@ Here's some pseudocode describing the flow of the script:
 							playSong()
 						case 4:
 							sayNiceThing()
+		# sleep a little while before starting the loop over
+		sleep(delay)
 
