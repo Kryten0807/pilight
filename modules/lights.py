@@ -5,6 +5,8 @@
 
 import datetime
 
+# check the time against the configured times and light the appropriate lights
+#
 def checkLights():
 	# get the current time
 	#
@@ -31,6 +33,9 @@ def checkLights():
 
 
 # @todo write functions to turn lights on/off
+
+# set the state of the green light
+#
 def greenLight(state):
 	# check the state
 	#
@@ -39,6 +44,8 @@ def greenLight(state):
 	else:
 		print "G=off"
 
+# set the state of the yellow light
+#
 def yellowLight(state):
 	# check the state
 	#
@@ -47,6 +54,8 @@ def yellowLight(state):
 	else:
 		print "Y=off"
 
+# set the state of the red light
+#
 def redLight(state):
 	# check the state
 	#
