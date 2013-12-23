@@ -62,3 +62,18 @@ def waitForAnyButton():
 		n = n + delay
 
 	return False
+
+def waitForRedButton():
+	# a counter to stop the waiting if nothing happens
+	#
+	n = 0;
+
+	while n<timeout:
+		if( checkButton(redButton) ):
+			return True
+
+		time.sleep(delay)
+
+		n = n + delay
+
+	return False
