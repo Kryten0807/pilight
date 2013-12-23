@@ -4,6 +4,7 @@
 #
 execfile('modules/constants.py')
 execfile('modules/lights.py')
+execfile('modules/buttons.py')
 
 # start the loop
 #
