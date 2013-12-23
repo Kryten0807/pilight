@@ -40,3 +40,7 @@ redLightOn    = datetime.time(19,0,0)
 # the "inactivity" period, in seconds
 #
 inactiveTime = 2 * 3600;	# 2 hours
+
+# a flag used for the blinking light function to signal when it's time to stop
+#
+continueBlinking = False
