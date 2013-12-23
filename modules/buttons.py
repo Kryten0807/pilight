@@ -22,8 +22,8 @@ def getLastButtonPress():
 
 	# load the file
 	#
-	f = open('storage/lastButtonPress')
-	return json.load(f)
+	with open('storage/lastButtonPress') as f:
+		return json.load(f)
 
 def setLastButtonPress():
 	# get the current time
@@ -32,9 +32,9 @@ def setLastButtonPress():
 
 	# save the data
 	#
-	f = open('storage/lastButtonPress', 'w')
 	t = time.time()
-	json.dump(t, f)
+	with open('storage/lastButtonPress', 'w') as f:
+		json.dump(t, f)
 
 def secondsSinceLastButtonPress():
 	# get the last button press time
