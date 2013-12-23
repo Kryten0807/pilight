@@ -3,6 +3,8 @@
 # speech related functions
 
 from subprocess import call
+from time import localtime, strftime
+
 
 # say a line of text
 #
@@ -17,6 +19,19 @@ def sayGreeting():
 	#
 	say("Hello, "+childsName+".")
 	say("What would you like to do?")
+
+def sayCurrentTime():
+	# get the current time
+	# @todo convert from 24 hr clock to 12 hr
+	#
+	t = strftime("%H:%M", localtime())
+
+	# say it
+	#
+	say("It is now "+t+".")
+
+	# add the state of the lights (ie. not time to get up yet)
+	# @todo
 
 
 def sayIntroduction():
