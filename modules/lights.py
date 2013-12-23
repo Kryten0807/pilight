@@ -4,6 +4,7 @@
 #
 
 import datetime
+import time
 
 # check the time against the configured times and light the appropriate lights
 #
@@ -31,6 +32,38 @@ def checkLights():
 		redLight(True)
 
 
+def blinkAll():
+	# reset the flag
+	#
+	continueBlinking = True
+
+	# start the loop
+	#
+	while True:
+		# all lights on
+		#
+		greenLight(True)
+		yellowLight(True)
+		redLight(True)
+
+		# pause
+		#
+		time.sleep(delay)
+
+		# all lights off
+		#
+		greenLight(False)
+		yellowLight(False)
+		redLight(False)
+
+		# pause
+		#
+		time.sleep(delay)
+
+		# check the exit condition
+		#
+		if( not continueBlinking ):
+			return
 
 # @todo write functions to turn lights on/off
 
