@@ -24,3 +24,26 @@ def sayIntroduction():
 		say(t)
 
 
+def sayLightInstructions():
+	text = [
+		"Great. Thank you, "+childsName,
+		"Look at the front of my box. You'll see three big round lights.",
+		"I'm blinking them now.",
+		"One is green.",
+		"One is yellow.",
+		"And one is red.",
+		"When the green light is on, it's time to go see mommy and daddy in their room.",
+		"When the red light is on, that means it's time to stay in your room.",
+		"And when the yellow light is on, that means it's almost time to go see mommy and daddy.",
+		"But it's not time yet.",
+		"Do you understand, "+childsName+"?",
+		"Green means go see mommy and daddy.",
+		"Red means stay in your room.",
+		"And yellow means it's almost time to get up.",
+		"Thanks for listening, "+childsName,
+		"Press a button and I'll tell you more."
+	]
+
+	for t in text:
+		say(t)
+
