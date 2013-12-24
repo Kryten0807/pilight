@@ -6,6 +6,58 @@ import threading
 import time
 import subprocess
 
+# A thread class for handling the light state
+#
+class LightThread (threading.Thread):
+
+	def __init__(self):
+		threading.Thread.__init__(self)
+		self.blink = False
+		self.blinkState = False
+
+	def run(self):
+		# the main loop for the lights
+		#
+		while True:
+			# are we paused? if not, then update the current light state
+			#
+			if( not self.blink ):
+				# set the light state based on the time of day
+				#
+				checkLights()
+			else:
+				# the system wants to blink the lights
+				#
+				greenLight(self.blinkState)
+				yellowLight(self.blinkState)
+				redLight(self.blinkState)
+
+				self.blinkState = not self.blinkState
+
+			# delay
+			#
+			time.sleep(delay)
+
+	def blinkOn(self):
+		# reset the blink state
+		#
+		self.blinkState = False
+
+		# set the blink flag
+		#
+		self.blink = True
+
+	def blinkOff(self):
+		# set the blink flag
+		#
+		self.blink = False
+
+		# reset the blink state
+		#
+		self.blinkState = False
+
+
+
 # A thread class for speaking a series of lines
 #
 class SpeechThread (threading.Thread):
