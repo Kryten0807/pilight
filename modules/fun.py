@@ -5,25 +5,6 @@
 import random
 import time
 
-def playSong():
-	# the list of songs
-	#
-	songs = [
-		"/path/to/song1.mp3",
-		"/path/to/song2.mp3",
-		"/path/to/song3.mp3",
-	]
-
-	# choose a song from the list at random
-	#
-	i = random.randint(0,len(songs)-1)
-
-	# play the song
-	#
-	songThread = SongThread(songs[i])
-
-	songThread.start()
-
 
 '''
 def tellJoke():
