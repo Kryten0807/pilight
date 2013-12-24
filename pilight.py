@@ -53,7 +53,7 @@ while True:
 		# when was the last button pressed? if more than two hours ago,
 		# then say the appropriate greeting
 		#
-		if( secondsSinceLastButtonPress>inactiveTime ):
+		if( secondsSinceLastButtonPress()>inactiveTime ):
 			# is this the first run? if so, say the first run greeting and
 			# the instructions
 			#
