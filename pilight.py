@@ -51,10 +51,6 @@ songThread = SongThread()
 # start the loop
 #
 while True:
-	# Light the appropriate lights
-	#
-	checkLights()
-
 	# Handle the buttons
 	#
 	if( checkButton(redButton) or checkButton(blackButton) ):
