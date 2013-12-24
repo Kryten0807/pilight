@@ -32,9 +32,9 @@ redLightPin    = 25
 # time values
 # These are the times at which to turn on the appropriate lights
 #
-greenLightOn  = datetime.time(7,0,0)
-yellowLightOn = datetime.time(6,30,0)
-redLightOn    = datetime.time(19,0,0)
+greenLightOnTime  = datetime.time(7,0,0)
+yellowLightOnTime = datetime.time(6,30,0)
+redLightOnTime    = datetime.time(19,0,0)
 
 
 # the "inactivity" period, in seconds
