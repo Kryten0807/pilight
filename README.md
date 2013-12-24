@@ -97,3 +97,9 @@ Here's some pseudocode describing the flow of the script:
 Please note that this is the only python script I've written, apart from a
 couple of copied & pasted scripts for the Pi. I'm sure I've violated some python
 rules & customs. Please let me know if there are better ways to write this code!
+
+## @TODOs and Enhancements
+
+1. Add additional fun things to do: weather reports, jokes, etc.
+1. Add a web interface to allow remote configuration by non-technical users
+1. In the web interface, add a "say now" function to let users say things remotely
