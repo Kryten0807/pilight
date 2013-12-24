@@ -5,7 +5,7 @@ from sys import exit
 
 # load the modules
 #
-execfile('modules/constants.py')
+execfile('modules/config.py')
 execfile('modules/gpio.py')
 execfile('modules/threads.py')
 execfile('modules/lights.py')

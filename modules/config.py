@@ -1,4 +1,4 @@
-# constants.py
+# config.py
 #
 # Contains the constant values for the various parts of the pilight script
 
