@@ -83,18 +83,18 @@ def blinkAll():
 def greenLight(state):
 	# set the state
 	#
-	setPinState(greenLight, state)
+	setPinState(greenLightPin, state)
 
 # set the state of the yellow light
 #
 def yellowLight(state):
 	# set the state
 	#
-	setPinState(yellowLight, state)
+	setPinState(yellowLightPin, state)
 
 # set the state of the red light
 #
 def redLight(state):
 	# set the state
 	#
-	setPinState(redLight, state)
+	setPinState(redLightPin, state)
