@@ -19,12 +19,12 @@ timeout = 10 * 60		# 10 minutes
 
 # GPIO pin numbers
 #
-redButton   = 1
-blackButton = 2
+redButton   = 17
+blackButton = 27
 
-greenLight  = 3
-yellowLight = 4
-redLight    = 5
+greenLight  = 23
+yellowLight = 24
+redLight    = 25
 
 # time values
 # These are the times at which to turn on the appropriate lights
