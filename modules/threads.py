@@ -81,6 +81,8 @@ class SpeechThread (threading.Thread):
 	def stop(self):
 		self.stopFlag = True
 
+
+
 # A thread class for playing a song
 #
 class SongThread (threading.Thread):
