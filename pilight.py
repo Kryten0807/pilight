@@ -33,6 +33,14 @@ setGPIOPinOut(redLight)
 setGPIOPinIn(redButton)
 setGPIOPinIn(blackButton)
 
+# initialize the light control thread
+#
+lightThread = LightThread()
+
+# start the light thread
+#
+lightThread.start()
+
 # start the loop
 #
 while True:
