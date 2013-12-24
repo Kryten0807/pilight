@@ -30,20 +30,9 @@ def introduction():
 	if( not b ):
 		return
 
-	# start blinking the lights
-	# threading code from http://stackoverflow.com/questions/2846653/python-multithreading-for-dummies
-	# if this doesn't work, try http://stackoverflow.com/questions/323972/is-there-any-way-to-kill-a-thread-in-python
-	#
-	t = threading.Thread(target=blinkAll, args=())
-	t.start()
-
 	# say the instructions
 	#
 	sayLightInstructions()
-
-	# stop blinking the lights
-	#
-	continueBlinking = False
 
 	# wait for a button
 	#
