@@ -25,6 +25,7 @@ def playSong():
 	songThread.start()
 
 
+'''
 def tellJoke():
 	# the list of jokes
 	#
@@ -48,7 +49,6 @@ def tellJoke():
 	# @todo tell the answer to the joke
 	#
 
-
 def giveWeatherReport():
 	# get the weather
 	# @todo get the weather report
@@ -62,4 +62,4 @@ def giveWeatherReport():
 	# see http://forecast.weather.gov/MapClick.php?lat=34.20540&lon=-119.16813730000001&unit=0&lg=english&FcstType=dwml for a sample weather report as XML
 	# @todo say the weather report
 	#
-
+'''
