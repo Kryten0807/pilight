@@ -24,9 +24,9 @@ timeout = 10 * 60		# 10 minutes
 redButton   = 17
 blackButton = 27
 
-greenLight  = 23
-yellowLight = 24
-redLight    = 25
+greenLightPin  = 23
+yellowLightPin = 24
+redLightPin    = 25
 
 
 # time values
