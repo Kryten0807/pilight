@@ -22,9 +22,8 @@ def sayGreeting():
 
 def sayCurrentTime():
 	# get the current time
-	# @todo convert from 24 hr clock to 12 hr
 	#
-	t = strftime("%H:%M", localtime())
+	t = strftime("%I:%M", localtime())
 
 	# say it
 	#
