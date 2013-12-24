@@ -13,6 +13,10 @@ def checkLights():
 	#
 	currentTime = datetime.datetime.time(datetime.datetime.now())
 
+	# declare a variable to hold the state
+	#
+	state = ''
+
 	# check the time
 	#
 	if( currentTime>=yellowLightOn and currentTime<greenLightOn ):
@@ -20,16 +24,25 @@ def checkLights():
 		greenLight(False)
 		yellowLight(True)
 		redLight(False)
+		state = 'yellow'
+
 	elif( currentTime>=greenLightOn and currentTime<redLightOn ):
 		# green light on, other lights off
 		greenLight(True)
 		yellowLight(False)
 		redLight(False)
+		state = 'green'
+
 	else:
 		# red light on, other lights off
 		greenLight(False)
 		yellowLight(False)
 		redLight(True)
+		state = 'red'
+
+	# return the state
+	#
+	return state
 
 
 def blinkAll():
