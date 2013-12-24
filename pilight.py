@@ -86,7 +86,9 @@ while True:
 				if( songThread.isAlive() ):
 					songThread.stop()
 
-			elif( black ):
+			# handle the individual button presses
+			#
+			if( black ):
 				# the black button is pressed. Announce the time
 				#
 				sayCurrentTime()
