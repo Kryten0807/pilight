@@ -19,14 +19,14 @@ def checkLights():
 
 	# check the time
 	#
-	if( currentTime>=yellowLightOn and currentTime<greenLightOn ):
+	if( currentTime>=yellowLightOnTime and currentTime<greenLightOnTime ):
 		# yellow light on, other lights off
 		greenLight(False)
 		yellowLight(True)
 		redLight(False)
 		state = 'yellow'
 
-	elif( currentTime>=greenLightOn and currentTime<redLightOn ):
+	elif( currentTime>=greenLightOnTime and currentTime<redLightOnTime ):
 		# green light on, other lights off
 		greenLight(True)
 		yellowLight(False)
