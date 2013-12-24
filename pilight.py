@@ -7,6 +7,7 @@ from sys import exit
 # load the modules
 #
 execfile('modules/constants.py')
+execfile('modules/gpio.py')
 execfile('modules/lights.py')
 execfile('modules/buttons.py')
 execfile('modules/firstrun.py')
@@ -16,6 +17,21 @@ execfile('modules/speak.py')
 sayCurrentTime()
 
 exit()
+
+# initialize the GPIO state
+#
+setGPIOMode()
+
+# the output pins (for the LEDs)
+#
+setGPIOPinOut(greenLight)
+setGPIOPinOut(yellowLight)
+setGPIOPinOut(redLight)
+
+# the input pins (for the buttons)
+#
+setGPIOPinIn(redButton)
+setGPIOPinIn(blackButton)
 
 # start the loop
 #
