@@ -45,39 +45,6 @@ def checkLights():
 	return state
 
 
-def blinkAll():
-	# reset the flag
-	#
-	continueBlinking = True
-
-	# start the loop
-	#
-	while True:
-		# all lights on
-		#
-		greenLight(True)
-		yellowLight(True)
-		redLight(True)
-
-		# pause
-		#
-		time.sleep(delay)
-
-		# all lights off
-		#
-		greenLight(False)
-		yellowLight(False)
-		redLight(False)
-
-		# pause
-		#
-		time.sleep(delay)
-
-		# check the exit condition
-		#
-		if( not continueBlinking ):
-			return
-
 # set the state of the green light
 #
 def setGreenLightOn(state):
