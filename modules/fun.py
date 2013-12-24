@@ -9,18 +9,22 @@ def playSong():
 	# the list of songs
 	#
 	songs = [
-		"alpha",
-		"beta"
+		"/path/to/song1.mp3",
+		"/path/to/song2.mp3",
+		"/path/to/song3.mp3",
 	]
 
 	# choose a song from the list at random
 	# @todo the upper bound of this should be the largest index in the songs array
 	#
-	i = random.randint(0,2)
+	i = random.randint(0,len(songs)-1)
 
 	# play the song
-	# @todo play the song via shell command?
 	#
+	songThread = SongThread(songs[i])
+
+	songThread.start()
+
 
 def tellJoke():
 	# the list of jokes
