@@ -29,9 +29,9 @@ class LightThread (threading.Thread):
 			else:
 				# the system wants to blink the lights
 				#
-				greenLight(self.blinkState)
-				yellowLight(self.blinkState)
-				redLight(self.blinkState)
+				setGreenLightOn(self.blinkState)
+				setYellowLightOn(self.blinkState)
+				setRedLightOn(self.blinkState)
 
 				self.blinkState = not self.blinkState
 
