@@ -3,7 +3,6 @@
 import time
 from sys import exit
 
-
 # load the modules
 #
 execfile('modules/constants.py')
