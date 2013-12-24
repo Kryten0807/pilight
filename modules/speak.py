@@ -37,7 +37,7 @@ def sayCurrentTime():
 		say("It's time to get up.")
 	elif( state=='yellow' ):
 		say("It's almost time to get up, but not yet.")
-	else
+	else:
 		say("It's not time to get up.")
 
 
