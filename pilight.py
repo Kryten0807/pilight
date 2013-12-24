@@ -15,10 +15,6 @@ execfile('modules/speak.py')
 execfile('modules/fun.py')
 
 
-sayCurrentTime()
-
-exit()
-
 # initialize the GPIO state
 #
 setGPIOMode()
