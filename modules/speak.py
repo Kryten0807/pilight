@@ -72,7 +72,10 @@ def sayIntroduction():
 
 
 def sayLightInstructions():
-	speech = SpeechThread([
+	# start blinking the lights
+	#
+	lightThread.blinkOn()
+
 	# the lines to say
 	#
 	lines = [
@@ -97,8 +100,10 @@ def sayLightInstructions():
 	for l in lines:
 		say(l)
 
+	# stop blinking the lights
+	#
+	lightThread.blinkOff()
 
-	speech.start()
 
 def sayButtonInstructions():
 	lines = [
