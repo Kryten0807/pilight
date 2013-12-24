@@ -31,7 +31,14 @@ def sayCurrentTime():
 	say("It is now "+t+".")
 
 	# add the state of the lights (ie. not time to get up yet)
-	# @todo
+	state = checkLights()
+
+	if( state=='green' ):
+		say("It's time to get up.")
+	elif( state=='yellow' ):
+		say("It's almost time to get up, but not yet.")
+	else
+		say("It's not time to get up.")
 
 
 def sayIntroduction():
