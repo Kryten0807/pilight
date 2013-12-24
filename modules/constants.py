@@ -44,3 +44,12 @@ inactiveTime = 2 * 3600;	# 2 hours
 # a flag used for the blinking light function to signal when it's time to stop
 #
 continueBlinking = False
+
+
+# the list of songs available to play
+#
+songs = [
+	"/path/to/song1.mp3",
+	"/path/to/song2.mp3",
+	"/path/to/song3.mp3",
+]
