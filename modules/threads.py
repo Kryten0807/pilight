@@ -91,14 +91,6 @@ class SongThread (threading.Thread):
 		threading.Thread.__init__(self)
 
 	def run(self):
-		# the list of songs
-		#
-		songs = [
-			"/path/to/song1.mp3",
-			"/path/to/song2.mp3",
-			"/path/to/song3.mp3",
-		]
-
 		# choose a song from the list at random
 		#
 		i = random.randint(0,len(songs)-1)
