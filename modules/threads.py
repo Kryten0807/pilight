@@ -4,6 +4,7 @@
 
 import threading
 import time
+import subprocess
 
 # A thread class for speaking a series of lines
 #
@@ -28,3 +29,25 @@ class SpeechThread (threading.Thread):
 	def stop(self):
 		self.stopFlag = True
 
+# A thread class for playing a song
+#
+class SongThread (threading.Thread):
+
+	def __init__(self, file):
+		threading.Thread.__init__(self)
+		self.file = file
+		self.stopFlag = False
+
+	def run(self):
+		call([
+			"mpg123",
+			"-q",
+			self.file
+		])
+
+
+	def stop(self):
+		# find the PID
+		#
+		pid = subprocess.check_output(["./scripts/getMpg123PID"])
+		call(["kill", pid.strip()])
