@@ -82,3 +82,6 @@ Here's some pseudocode describing the flow of the script:
 		# sleep a little while before starting the loop over
 		sleep(delay)
 
+Please note that this is the only python script I've written, apart from a
+couple of copied & pasted scripts for the Pi. I'm sure I've violated some python
+rules & customs. Please let me know if there are better ways to write this code!
