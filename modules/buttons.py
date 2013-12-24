@@ -9,9 +9,9 @@ import json
 # check the state of a button
 #
 def checkButton(b):
-	# @todo check the GPIO state
+	# get the button state
 	#
-	return False;
+	return getPinState(b)
 
 def getLastButtonPress():
 	# does the file 'storage/lastButtonPress' exist? if not, return 0
