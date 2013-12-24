@@ -2,6 +2,7 @@
 #
 # speech related functions
 
+import random
 from subprocess import call
 from time import localtime, strftime
 
@@ -17,43 +18,60 @@ def sayGreeting():
 	# say the greeting
 	# @todo make this more fun - personalized, based on time of day, etc.
 	#
-	say("Hello, "+childsName+".")
-	say("What would you like to do?")
+	lines = []
+
+	i = random.randint(1,3)
+	if( i==1 ):
+		lines.append("Hello "+childsName+".")
+	elif( i==2 ):
+		lines.append("Good morning "+childsName+".")
+	else:
+		lines.append("Hi "+childsName+".")
+
+	lines.append("What would you like to do next?")
+
+	speech = SpeechThread(lines)
+
+	speech.start()
+
+
 
 def sayCurrentTime():
 	# get the current time
 	#
 	t = strftime("%I:%M", localtime())
 
-	# say it
+	# build the list of lines to speak
 	#
-	say("It is now "+t+".")
+	lines = ["It is now "+t+"."]
 
 	# add the state of the lights (ie. not time to get up yet)
 	state = checkLights()
 
 	if( state=='green' ):
-		say("It's time to get up.")
+		lines.append("It's time to get up.")
 	elif( state=='yellow' ):
-		say("It's almost time to get up, but not yet.")
+		lines.append("It's almost time to get up, but not yet.")
 	else:
-		say("It's not time to get up.")
+		lines.append("It's not time to get up.")
 
+	speech = SpeechThread(lines)
+
+	speech.start()
 
 def sayIntroduction():
-	text = [
+	speech = SpeechThread([
 		"Hello "+childsName,
 		"I'm your new talking clock.",
 		"Would you like me to tell you how I work?",
 		"Press the red button or the black button."
-	]
+	])
 
-	for t in text:
-		say(t)
+	speech.start()
 
 
 def sayLightInstructions():
-	text = [
+	speech = SpeechThread([
 		"Great. Thank you, "+childsName,
 		"Look at the front of my box. You'll see three big round lights.",
 		"I'm blinking them now.",
@@ -70,19 +88,17 @@ def sayLightInstructions():
 		"And yellow means it's almost time to get up.",
 		"Thanks for listening, "+childsName,
 		"Press a button and I'll tell you more."
-	]
+	])
 
-	for t in text:
-		say(t)
+	speech.start()
 
 def sayButtonInstructions():
-	text = [
+	speech = SpeechThread([
 		"Great. Thank you, "+childsName,
 		"Now I'll tell you what the buttons do.",
 		"When you press the black button, I'll tell you what time it is.",
 		"When you press the red button, I'll surprise you with something fun.",
 		"Try the red button now!"
-	]
+	])
 
-	for t in text:
-		say(t)
+	speech.start()
