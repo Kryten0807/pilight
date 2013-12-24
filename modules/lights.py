@@ -21,23 +21,23 @@ def checkLights():
 	#
 	if( currentTime>=yellowLightOnTime and currentTime<greenLightOnTime ):
 		# yellow light on, other lights off
-		greenLight(False)
-		yellowLight(True)
-		redLight(False)
+		setGreenLightOn(False)
+		setYellowLightOn(True)
+		setRedLightOn(False)
 		state = 'yellow'
 
 	elif( currentTime>=greenLightOnTime and currentTime<redLightOnTime ):
 		# green light on, other lights off
-		greenLight(True)
-		yellowLight(False)
-		redLight(False)
+		setGreenLightOn(True)
+		setYellowLightOn(False)
+		setRedLightOn(False)
 		state = 'green'
 
 	else:
 		# red light on, other lights off
-		greenLight(False)
-		yellowLight(False)
-		redLight(True)
+		setGreenLightOn(False)
+		setYellowLightOn(False)
+		setRedLightOn(True)
 		state = 'red'
 
 	# return the state
@@ -80,21 +80,21 @@ def blinkAll():
 
 # set the state of the green light
 #
-def greenLight(state):
+def setGreenLightOn(state):
 	# set the state
 	#
 	setPinState(greenLightPin, state)
 
 # set the state of the yellow light
 #
-def yellowLight(state):
+def setYellowLightOn(state):
 	# set the state
 	#
 	setPinState(yellowLightPin, state)
 
 # set the state of the red light
 #
-def redLight(state):
+def setRedLightOn(state):
 	# set the state
 	#
 	setPinState(redLightPin, state)
