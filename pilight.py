@@ -21,9 +21,9 @@ setGPIOMode()
 
 # the output pins (for the LEDs)
 #
-setGPIOPinOut(greenLight)
-setGPIOPinOut(yellowLight)
-setGPIOPinOut(redLight)
+setGPIOPinOut(greenLightPin)
+setGPIOPinOut(yellowLightPin)
+setGPIOPinOut(redLightPin)
 
 # the input pins (for the buttons)
 #
