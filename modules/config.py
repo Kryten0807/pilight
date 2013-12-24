@@ -13,6 +13,10 @@ childsName = "Robert"
 #
 delay = 0.25			# 1/4 second
 
+# the delay for the light check loop, in seconds
+#
+lightDelay = 5
+
 
 # the timeout value for waits, in seconds
 #
