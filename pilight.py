@@ -8,6 +8,7 @@ from sys import exit
 #
 execfile('modules/constants.py')
 execfile('modules/gpio.py')
+execfile('modules/threads.py')
 execfile('modules/lights.py')
 execfile('modules/buttons.py')
 execfile('modules/firstrun.py')
