@@ -12,6 +12,7 @@ execfile('modules/lights.py')
 execfile('modules/buttons.py')
 execfile('modules/firstrun.py')
 execfile('modules/speak.py')
+execfile('modules/fun.py')
 
 
 sayCurrentTime()
