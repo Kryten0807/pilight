@@ -85,16 +85,26 @@ class SpeechThread (threading.Thread):
 #
 class SongThread (threading.Thread):
 
-	def __init__(self, file):
+	def __init__(self):
 		threading.Thread.__init__(self)
-		self.file = file
-		self.stopFlag = False
 
 	def run(self):
+		# the list of songs
+		#
+		songs = [
+			"/path/to/song1.mp3",
+			"/path/to/song2.mp3",
+			"/path/to/song3.mp3",
+		]
+
+		# choose a song from the list at random
+		#
+		i = random.randint(0,len(songs)-1)
+
 		call([
 			"mpg123",
 			"-q",
-			self.file
+			songs[i]
 		])
 
 
@@ -102,4 +112,7 @@ class SongThread (threading.Thread):
 		# find the PID
 		#
 		pid = subprocess.check_output(["./scripts/getMpg123PID"])
+
+		# kill the process
+		#
 		call(["kill", pid.strip()])
