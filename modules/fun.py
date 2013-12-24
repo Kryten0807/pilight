@@ -15,7 +15,6 @@ def playSong():
 	]
 
 	# choose a song from the list at random
-	# @todo the upper bound of this should be the largest index in the songs array
 	#
 	i = random.randint(0,len(songs)-1)
 
