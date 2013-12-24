@@ -81,6 +81,7 @@ while True:
 			red = checkButton(redButton)
 			black = checkButton(blackButton)
 
+			# were both buttons pressed? if so, stop the current song (if any)
 			if( red and black ):
 				if( songThread.isAlive() ):
 					songThread.stop()
