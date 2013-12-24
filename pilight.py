@@ -80,21 +80,31 @@ while True:
 			# the child has been playing with it & has pressed a button
 			# recently
 			#
-			if( checkButton(black) ):
+
+			# get the button states
+			#
+			red = checkButton(redButton)
+			black = checkButton(blackButton)
+
+			if( red and black ):
+				if( songThread.isAlive() ):
+					songThread.stop()
+
+			elif( black ):
 				# the black button is pressed. Announce the time
 				#
 				sayCurrentTime()
 
-			if( checkButton(red) ):
-				# the red button is pressed. Do something fun
+			elif( red ):
+				# is a song already playing? if so, stop it & announce that
+				# we're going to play a new song. Otherwise, announce that it's
+				# time to play a song
 				#
-				n = rand()
-				if( n==0 ):
-					sayWeather()
-				elif( n==1 ):
-					sayJoke()
-				elif( n==2 ):
-					playSong()
+				if( songThread.isAlive() ):
+					songThread.stop()
+					say("I'm going to play a new song for you.")
+				else:
+					say("I'm going to play a song for you.")
 
 	# sleep for a brief period, then loop again
 	time.sleep(delay)
