@@ -60,18 +60,22 @@ def sayCurrentTime():
 	speech.start()
 
 def sayIntroduction():
-	speech = SpeechThread([
+	lines = [
 		"Hello "+childsName,
 		"I'm your new talking clock.",
 		"Would you like me to tell you how I work?",
 		"Press the red button or the black button."
-	])
+	]
 
-	speech.start()
+	for l in lines:
+		say(l)
 
 
 def sayLightInstructions():
 	speech = SpeechThread([
+	# the lines to say
+	#
+	lines = [
 		"Great. Thank you, "+childsName,
 		"Look at the front of my box. You'll see three big round lights.",
 		"I'm blinking them now.",
@@ -88,17 +92,22 @@ def sayLightInstructions():
 		"And yellow means it's almost time to get up.",
 		"Thanks for listening, "+childsName,
 		"Press a button and I'll tell you more."
-	])
+	]
+
+	for l in lines:
+		say(l)
+
 
 	speech.start()
 
 def sayButtonInstructions():
-	speech = SpeechThread([
+	lines = [
 		"Great. Thank you, "+childsName,
 		"Now I'll tell you what the buttons do.",
 		"When you press the black button, I'll tell you what time it is.",
-		"When you press the red button, I'll surprise you with something fun.",
-		"Try the red button now!"
-	])
+		"When you press the red button, I'll play a song for you.",
+		"If you want the song to stop, press the red and black buttons at the same time."
+	]
 
-	speech.start()
+	for l in lines:
+		say(l)
