@@ -65,35 +65,23 @@ def blinkAll():
 		if( not continueBlinking ):
 			return
 
-# @todo write functions to turn lights on/off
-
 # set the state of the green light
 #
 def greenLight(state):
-	# check the state
+	# set the state
 	#
-	if(state):
-		print "G=on"
-	else:
-		print "G=off"
+	setPinState(greenLight, state)
 
 # set the state of the yellow light
 #
 def yellowLight(state):
-	# check the state
+	# set the state
 	#
-	if(state):
-		print "Y=on"
-	else:
-		print "Y=off"
+	setPinState(yellowLight, state)
 
 # set the state of the red light
 #
 def redLight(state):
-	# check the state
+	# set the state
 	#
-	if(state):
-		print "R=on"
-	else:
-		print "R=off"
-
+	setPinState(redLight, state)
