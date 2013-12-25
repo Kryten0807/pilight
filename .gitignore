@@ -1,0 +1,5 @@
+# ignore the config
+modules/config.py
+
+# ignore the storage folder
+storage/
