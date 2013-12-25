@@ -6,17 +6,17 @@ from sys import exit
 
 # load the modules
 #
-path = os.path.dirname(os.path.abspath(__file__))
+basepath = os.path.dirname(os.path.abspath(__file__))
 
-execfile(path+"/modules/config.py")
-execfile(path+"/modules/gpio.py")
-execfile(path+"/modules/threads.py")
-execfile(path+"/modules/time.py")
-execfile(path+"/modules/lights.py")
-execfile(path+"/modules/buttons.py")
-execfile(path+"/modules/firstrun.py")
-execfile(path+"/modules/speak.py")
-execfile(path+"/modules/fun.py")
+execfile(basepath+"/modules/config.py")
+execfile(basepath+"/modules/gpio.py")
+execfile(basepath+"/modules/threads.py")
+execfile(basepath+"/modules/time.py")
+execfile(basepath+"/modules/lights.py")
+execfile(basepath+"/modules/buttons.py")
+execfile(basepath+"/modules/firstrun.py")
+execfile(basepath+"/modules/speak.py")
+execfile(basepath+"/modules/fun.py")
 
 
 # initialize the GPIO state
