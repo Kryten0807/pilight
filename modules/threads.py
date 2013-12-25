@@ -109,7 +109,7 @@ class SongThread (threading.Thread):
 	def stop(self):
 		# find the PID
 		#
-		pid = subprocess.check_output(["./scripts/getMusicPlayerPID"])
+		pid = subprocess.check_output([basepath+"/scripts/getMusicPlayerPID"])
 
 		# kill the process
 		#
