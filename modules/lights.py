@@ -11,7 +11,7 @@ import time
 def checkLights():
 	# get the current time
 	#
-	currentTime = datetime.datetime.time(datetime.datetime.now())
+	currentTime = getLocalTime()
 
 	# declare a variable to hold the state
 	#
