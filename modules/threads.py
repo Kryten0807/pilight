@@ -102,7 +102,8 @@ class SongThread (threading.Thread):
 		call([
 			"mplayer",
 			"-quiet",
-			songs[i]
+			songs[i],
+			">/dev/null"
 		])
 
 
