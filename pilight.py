@@ -104,5 +104,9 @@ while True:
 				else:
 					say("I'm going to play a song for you.")
 
+		# set the time of the last button press
+		#
+		setLastButtonPress()
+
 	# sleep for a brief period, then loop again
 	time.sleep(delay)
