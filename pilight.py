@@ -1,19 +1,22 @@
 # The main loop
 
+import os
 import time
 from sys import exit
 
 # load the modules
 #
-execfile('modules/config.py')
-execfile('modules/gpio.py')
-execfile('modules/threads.py')
-execfile('modules/time.py')
-execfile('modules/lights.py')
-execfile('modules/buttons.py')
-execfile('modules/firstrun.py')
-execfile('modules/speak.py')
-execfile('modules/fun.py')
+path = os.path.dirname(os.path.abspath(__file__))
+
+execfile(path+"/modules/config.py")
+execfile(path+"/modules/gpio.py")
+execfile(path+"/modules/threads.py")
+execfile(path+"/modules/time.py")
+execfile(path+"/modules/lights.py")
+execfile(path+"/modules/buttons.py")
+execfile(path+"/modules/firstrun.py")
+execfile(path+"/modules/speak.py")
+execfile(path+"/modules/fun.py")
 
 
 # initialize the GPIO state
