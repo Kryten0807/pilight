@@ -111,7 +111,7 @@ def sayButtonInstructions():
 		"Now I'll tell you what the buttons do.",
 		"When you press the black button, I'll tell you what time it is.",
 		"When you press the red button, I'll play a song for you.",
-		"If you want the song to stop, press the red and black buttons at the same time."
+		"If you want the song to stop, press the red button again."
 	]
 
 	for l in lines:
