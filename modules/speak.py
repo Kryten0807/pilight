@@ -79,7 +79,7 @@ def sayLightInstructions():
 	# the lines to say
 	#
 	lines = [
-		"Great. Thank you, "+childsName+".",
+		"Great. Thank you "+childsName+".",
 		"Look at the top of my box. You'll see three big round lights.",
 		"I'm blinking them now.",
 		"One is green.",
@@ -107,7 +107,7 @@ def sayLightInstructions():
 
 def sayButtonInstructions():
 	lines = [
-		"Great. Thank you, "+childsName+".",
+		"Great. Thank you "+childsName+".",
 		"Now I'll tell you what the buttons do.",
 		"When you press the black button, I'll tell you what time it is.",
 		"When you press the red button, I'll play a song for you.",
@@ -119,7 +119,7 @@ def sayButtonInstructions():
 
 def sayFinalInstructions():
 	lines = [
-		"OK, "+childsName+".",
+		"OK "+childsName+".",
 		"That's all for now.",
 		"Thank you for listening.",
 		"You can press the red or black button now."
