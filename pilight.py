@@ -105,6 +105,7 @@ while True:
 				else:
 					say("I'm going to play a song for you.")
 
+				songThread = SongThread()
 				songThread.start()
 
 		# set the time of the last button press
