@@ -12,7 +12,7 @@ from time import localtime, strftime
 def say(text):
 	# say the text
 	#
-	call([ "./scripts/speak", text ])
+	call([ basepath+"/scripts/speak", text ])
 
 def sayGreeting():
 	# say the greeting
