@@ -101,7 +101,7 @@ class SongThread (threading.Thread):
 
 		call([
 			"mplayer",
-			"-q",
+			"-quiet",
 			songs[i]
 		])
 
