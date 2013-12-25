@@ -44,18 +44,12 @@ def introduction():
 	#
 	sayButtonInstructions()
 
-	# reset the lights
+	# say the button instructions
 	#
-	checkLights()
+	sayFinalInstructions()
 
-	# wait for the red button
+	# set the "first run" flag
 	#
-	b = waitForRedButton()
-	if( not b ):
-		return
-
-	# play a song
-	#
-	playSong()
+	setFirstRunFlag()
 
 
