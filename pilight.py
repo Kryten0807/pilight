@@ -85,11 +85,6 @@ while True:
 			red = checkButton(redButton)
 			black = checkButton(blackButton)
 
-			# were both buttons pressed? if so, stop the current song (if any)
-			if( red and black ):
-				if( songThread.isAlive() ):
-					songThread.stop()
-
 			# handle the individual button presses
 			#
 			if( black ):
@@ -104,12 +99,11 @@ while True:
 				#
 				if( songThread.isAlive() ):
 					songThread.stop()
-					say("I'm going to play a new song for you.")
+					say("I stopped the song.")
 				else:
 					say("I'm going to play a song for you.")
-
-				songThread = SongThread()
-				songThread.start()
+					songThread = SongThread()
+					songThread.start()
 
 		# set the time of the last button press
 		#
