@@ -116,3 +116,14 @@ def sayButtonInstructions():
 
 	for l in lines:
 		say(l)
+
+def sayFinalInstructions():
+	lines = [
+		"OK, "+childsName+".",
+		"That's all for now.",
+		"Thank you for listening.",
+		"You can press the red or black button now."
+	]
+
+	for l in lines:
+		say(l)
