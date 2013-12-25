@@ -1,0 +1,2 @@
+#!/bin/bash
+echo `ps aux | grep "[0-9]\smplayer" | grep -Po "^[a-zA-Z0-9]+\s+[0-9]+\s" | grep -Po "[0-9]+"`
