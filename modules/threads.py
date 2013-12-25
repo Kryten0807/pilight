@@ -37,7 +37,10 @@ class LightThread (threading.Thread):
 
 			# delay
 			#
-			time.sleep(lightDelay)
+			if( self.blink ):
+				time.sleep(delay)
+			else:
+				time.sleep(lightDelay)
 
 	def blinkOn(self):
 		# reset the blink state
