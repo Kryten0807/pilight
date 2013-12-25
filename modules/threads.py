@@ -100,7 +100,7 @@ class SongThread (threading.Thread):
 		i = random.randint(0,len(songs)-1)
 
 		call([
-			"mpg123",
+			"mplayer",
 			"-q",
 			songs[i]
 		])
@@ -109,7 +109,7 @@ class SongThread (threading.Thread):
 	def stop(self):
 		# find the PID
 		#
-		pid = subprocess.check_output(["./scripts/getMpg123PID"])
+		pid = subprocess.check_output(["./scripts/getMusicPlayerPID"])
 
 		# kill the process
 		#
