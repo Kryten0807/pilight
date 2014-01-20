@@ -9,7 +9,7 @@ import urllib
 
 # the cache folder
 #
-cacheFolder = '../storage/'
+cacheFolder = './storage/'
 
 # get the script arguments
 #
