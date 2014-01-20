@@ -42,9 +42,7 @@ def sayGreeting():
 
 	lines.append("What would you like to do next?")
 
-	speech = SpeechThread(lines)
-
-	speech.start()
+	sayLines(lines)
 
 
 
@@ -67,9 +65,9 @@ def sayCurrentTime():
 	else:
 		lines.append("It's not time to get up.")
 
-	speech = SpeechThread(lines)
+	sayLines(lines)
 
-	speech.start()
+
 
 def sayIntroduction():
 	lines = [
