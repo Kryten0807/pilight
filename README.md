@@ -1,4 +1,4 @@
-# PiLight
+# PiLight v0.1.0
 
 A Raspberry Pi powered visual alarm.
 
