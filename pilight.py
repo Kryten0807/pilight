@@ -1,3 +1,5 @@
+# pilight.py
+
 # The main loop
 
 import os
