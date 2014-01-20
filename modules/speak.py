@@ -12,8 +12,10 @@ from time import localtime, strftime
 def say(text):
 	# say the text
 	#
-	call([ 'python', basepath+"/scripts/cspeak", text ])
-	# call([ basepath+"/scripts/speak", text ])
+	call([ 'python', basepath+"/scripts/cspeak.py", text ])
+
+
+
 
 def sayGreeting():
 	# say the greeting
