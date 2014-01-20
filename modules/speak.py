@@ -16,6 +16,15 @@ def say(text):
 
 
 
+# say a collection of lines
+#
+def sayLines(lines):
+	# step through the lines
+	#
+	for l in lines:
+		say(l)
+
+
 
 def sayGreeting():
 	# say the greeting
