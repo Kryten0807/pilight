@@ -9,19 +9,19 @@ import json
 # check the state of a button
 #
 def checkButton(b):
-	# @todo check the GPIO state
+	# get the button state
 	#
-	return False;
+	return getPinState(b)
 
 def getLastButtonPress():
 	# does the file 'storage/lastButtonPress' exist? if not, return 0
 	#
-	if( not os.path.exists('storage/lastButtonPress') ):
+	if( not os.path.exists(basepath+'/storage/lastButtonPress') ):
 		return 0
 
 	# load the file
 	#
-	with open('storage/lastButtonPress') as f:
+	with open(basepath+'/storage/lastButtonPress') as f:
 		return json.load(f)
 
 def setLastButtonPress():
@@ -32,7 +32,7 @@ def setLastButtonPress():
 	# save the data
 	#
 	t = time.time()
-	with open('storage/lastButtonPress', 'w') as f:
+	with open(basepath+'/storage/lastButtonPress', 'w') as f:
 		json.dump(t, f)
 
 def secondsSinceLastButtonPress():
