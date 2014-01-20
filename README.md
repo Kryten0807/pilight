@@ -1,4 +1,4 @@
-# PiLight
+# PiLight v0.1.0
 
 A Raspberry Pi powered visual alarm.
 
@@ -29,6 +29,18 @@ I wanted to add a little more to it, though - I wanted it to be fun! However,
 it's now Dec. 23 and I want to sneak it into his room when he's asleep on
 Christmas eve, so my first release of this script is going to be a little light
 on options.
+
+
+## A Note about this Repository
+
+This repository follows the "gitflow" system. All the development is being done
+on the develop branch (and on feature branches where appropriate). When I'm
+happy with the current state, changes will be merged into the master branch. As
+of this writing (12/24/2013), neither the master branch nor the develop branch
+are ready for use. I'll be doing some testing later today and will (hopefully)
+merge the develop branch into the master branch in time for this to be deployed
+as a Christmas present.
+
 
 ## How it Works
 
