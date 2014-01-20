@@ -9,7 +9,10 @@ from sys import exit
 basepath = os.path.dirname(os.path.abspath(__file__))
 
 execfile(basepath+"/modules/config-default.py")
-execfile(basepath+"/modules/config.py")
+
+if( os.path.exists(basepath+"/modules/config.py") ):
+	execfile(basepath+"/modules/config.py")
+
 execfile(basepath+"/modules/gpio.py")
 execfile(basepath+"/modules/threads.py")
 execfile(basepath+"/modules/time.py")
