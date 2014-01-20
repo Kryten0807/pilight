@@ -20,10 +20,6 @@ execfile(basepath+"/modules/speak.py")
 execfile(basepath+"/modules/fun.py")
 
 
-say("What are you talking about!")
-
-sys.exit()
-
 
 # initialize the GPIO state
 #
