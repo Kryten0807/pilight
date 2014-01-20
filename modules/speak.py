@@ -77,8 +77,8 @@ def sayIntroduction():
 		"Press the red button or the black button."
 	]
 
-	for l in lines:
-		say(l)
+	sayLines(lines)
+
 
 
 def sayLightInstructions():
@@ -115,6 +115,7 @@ def sayLightInstructions():
 	lightThread.blinkOff()
 
 
+
 def sayButtonInstructions():
 	lines = [
 		"Great. Thank you "+childsName+".",
@@ -124,8 +125,9 @@ def sayButtonInstructions():
 		"If you want the song to stop, press the red button again."
 	]
 
-	for l in lines:
-		say(l)
+	sayLines(lines)
+
+
 
 def sayFinalInstructions():
 	lines = [
@@ -135,5 +137,4 @@ def sayFinalInstructions():
 		"You can press the red or black button now."
 	]
 
-	for l in lines:
-		say(l)
+	sayLines(lines)
