@@ -50,3 +50,7 @@ inactiveTime = 2 * 3600;	# 2 hours
 #
 songs = []
 
+
+# the path to the "remote speech" file
+#
+remoteSpeechFile = ""
