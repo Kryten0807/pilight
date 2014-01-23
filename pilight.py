@@ -16,30 +16,14 @@ if( os.path.exists(basepath+"/modules/config.py") ):
 	execfile(basepath+"/modules/config.py")
 
 execfile(basepath+"/modules/gpio.py")
-execfile(basepath+"/modules/threads.py")
 execfile(basepath+"/modules/time.py")
 execfile(basepath+"/modules/lights.py")
 execfile(basepath+"/modules/buttons.py")
 execfile(basepath+"/modules/firstrun.py")
 execfile(basepath+"/modules/speak.py")
 execfile(basepath+"/modules/fun.py")
+execfile(basepath+"/modules/threads.py")
 
-
-
-# initialize the GPIO state
-#
-setGPIOMode()
-
-# the output pins (for the LEDs)
-#
-setGPIOPinOut(greenLightPin)
-setGPIOPinOut(yellowLightPin)
-setGPIOPinOut(redLightPin)
-
-# the input pins (for the buttons)
-#
-setGPIOPinIn(redButton)
-setGPIOPinIn(blackButton)
 
 # initialize the light control thread
 #
@@ -116,5 +100,24 @@ while True:
 		#
 		setLastButtonPress()
 
+	# does the remote speech file exist? if so, load it and say it!
+	#
+	if( remoteSpeechFile!="" ):
+		remoteSpeech = []
+		try:
+			with open(remoteSpeechFile, "rU") as f:
+				for line in f:
+					remoteSpeech.append(line)
+				f.close()
+
+			if( len(remoteSpeech)>0 ):
+				sayLines(remoteSpeech)
+				os.remove(remoteSpeechFile)
+
+		except IOError:
+			remoteSpeech = []
+
+
 	# sleep for a brief period, then loop again
+	#
 	time.sleep(delay)
