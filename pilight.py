@@ -43,6 +43,7 @@ lightThread = LightThread()
 #
 lightThread.start()
 
+
 # declare a song thread variable for later use. If it's set, then we can check
 # to see if it's running and stop it if we need to
 #
