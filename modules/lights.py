@@ -6,6 +6,7 @@
 import datetime
 import time
 
+
 # check the time against the configured times and light the appropriate lights
 #
 def checkLights():
