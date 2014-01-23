@@ -25,22 +25,6 @@ execfile(basepath+"/modules/speak.py")
 execfile(basepath+"/modules/fun.py")
 
 
-
-# initialize the GPIO state
-#
-setGPIOMode()
-
-# the output pins (for the LEDs)
-#
-setGPIOPinOut(greenLightPin)
-setGPIOPinOut(yellowLightPin)
-setGPIOPinOut(redLightPin)
-
-# the input pins (for the buttons)
-#
-setGPIOPinIn(redButton)
-setGPIOPinIn(blackButton)
-
 # initialize the light control thread
 #
 lightThread = LightThread()
