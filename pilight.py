@@ -23,6 +23,9 @@ execfile(basepath+"/modules/firstrun.py")
 execfile(basepath+"/modules/speak.py")
 execfile(basepath+"/modules/fun.py")
 execfile(basepath+"/modules/threads.py")
+execfile(basepath+"/modules/httpd.py")
+
+
 
 
 # initialize the light control thread
