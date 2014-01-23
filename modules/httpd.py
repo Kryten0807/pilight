@@ -40,7 +40,8 @@ class HTTPServerThread (threading.Thread):
 
 		protocol     = "HTTP/1.0"
 
-		server_address = ('127.0.0.1', self.port)
+		server_address = ('10.40.0.15', self.port)
+		# server_address = ('127.0.0.1', self.port)
 		self.handlerClass.protocol_version = protocol
 
 		self.httpd = self.serverClass(server_address, self.handlerClass)
