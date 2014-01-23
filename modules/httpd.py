@@ -5,6 +5,8 @@
 import BaseHTTPServer
 import SimpleHTTPServer
 import SocketServer
+import re
+import urllib
 
 
 # A thread class for handling HTTP requests
