@@ -2,12 +2,15 @@
 #
 # functions  related to the "first run" functionality
 
+
 import threading
+
 
 # is this the first run of the application?
 #
 def isFirstRun():
 	return not os.path.exists(basepath+'/storage/firstRun')
+
 
 # set the "first run" flag
 #
@@ -16,6 +19,7 @@ def setFirstRunFlag():
 	#
 	with open(basepath+'/storage/firstRun', 'w') as f:
 		f.write('')
+
 
 # go through the introduction routine
 #
