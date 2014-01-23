@@ -16,13 +16,13 @@ if( os.path.exists(basepath+"/modules/config.py") ):
 	execfile(basepath+"/modules/config.py")
 
 execfile(basepath+"/modules/gpio.py")
-execfile(basepath+"/modules/threads.py")
 execfile(basepath+"/modules/time.py")
 execfile(basepath+"/modules/lights.py")
 execfile(basepath+"/modules/buttons.py")
 execfile(basepath+"/modules/firstrun.py")
 execfile(basepath+"/modules/speak.py")
 execfile(basepath+"/modules/fun.py")
+execfile(basepath+"/modules/threads.py")
 
 
 # initialize the light control thread
