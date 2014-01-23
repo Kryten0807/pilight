@@ -26,6 +26,13 @@ execfile(basepath+"/modules/threads.py")
 execfile(basepath+"/modules/httpd.py")
 
 
+# initialize the HTTP server thread
+#
+h = HTTPServerThread(8080)
+
+# start the HTTP server thread
+#
+h.start()
 
 
 # initialize the light control thread
