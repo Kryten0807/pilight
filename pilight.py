@@ -100,5 +100,24 @@ while True:
 		#
 		setLastButtonPress()
 
+	# does the remote speech file exist? if so, load it and say it!
+	#
+	if( remoteSpeechFile!="" ):
+		remoteSpeech = []
+		try:
+			with open(remoteSpeechFile, "rU") as f:
+				for line in f:
+					remoteSpeech.append(line)
+				f.close()
+
+			if( len(remoteSpeech)>0 ):
+				sayLines(remoteSpeech)
+				os.remove(remoteSpeechFile)
+
+		except IOError:
+			remoteSpeech = []
+
+
 	# sleep for a brief period, then loop again
+	#
 	time.sleep(delay)
