@@ -17,6 +17,10 @@ class HTTPServerThread (threading.Thread):
 	#
 	port = 8080
 
+	# the server address
+	#
+	serverAddress = ("127.0.0.1", 8080)
+
 	# the handler class
 	#
 	handlerClass = None
@@ -31,20 +35,26 @@ class HTTPServerThread (threading.Thread):
 
 	# initialize the server
 	#
-	def __init__(self, port=8080):
+	def __init__(self, address="127.0.0.1", port=8080):
 		threading.Thread.__init__(self)
 
+		# save the arguments
+		#
+		self.serverAddress = (address, port)
 		self.port         = port
+
+		# instantiate the request handler
+		#
 		self.handlerClass = piRequestHandler
+
+
 		self.serverClass  = BaseHTTPServer.HTTPServer
 
 		protocol     = "HTTP/1.0"
 
-		server_address = ('10.40.0.15', self.port)
-		# server_address = ('127.0.0.1', self.port)
 		self.handlerClass.protocol_version = protocol
 
-		self.httpd = self.serverClass(server_address, self.handlerClass)
+		self.httpd = self.serverClass(self.serverAddress, self.handlerClass)
 
 
 	# run the server
