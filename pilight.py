@@ -23,6 +23,16 @@ execfile(basepath+"/modules/firstrun.py")
 execfile(basepath+"/modules/speak.py")
 execfile(basepath+"/modules/fun.py")
 execfile(basepath+"/modules/threads.py")
+execfile(basepath+"/modules/httpd.py")
+
+
+# initialize the HTTP server thread
+#
+h = HTTPServerThread("127.0.0.1", 8080)
+
+# start the HTTP server thread
+#
+h.start()
 
 
 # initialize the light control thread
@@ -32,6 +42,7 @@ lightThread = LightThread()
 # start the light thread
 #
 lightThread.start()
+
 
 # declare a song thread variable for later use. If it's set, then we can check
 # to see if it's running and stop it if we need to
