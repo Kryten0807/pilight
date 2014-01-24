@@ -28,7 +28,7 @@ execfile(basepath+"/modules/httpd.py")
 
 # initialize the HTTP server thread
 #
-h = HTTPServerThread(8080)
+h = HTTPServerThread("127.0.0.1", 8080)
 
 # start the HTTP server thread
 #
