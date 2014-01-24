@@ -130,7 +130,8 @@ class piRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
 			# speak the text string
 			#
-			say(speech)
+			if speech:
+				say(speech)
 
 			# and return
 			#
