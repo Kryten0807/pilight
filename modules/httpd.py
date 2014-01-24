@@ -63,7 +63,7 @@ class HTTPServerThread (threading.Thread):
 		# the main loop for the HTTP server
 		#
 		sa = self.httpd.socket.getsockname()
-		print "Serving HTTP on", sa[0], "port", sa[1], "..."
+
 		# keep serving until killed
 		#
 		self.httpd.serve_forever()
