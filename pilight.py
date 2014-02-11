@@ -3,6 +3,7 @@
 # The main loop
 
 import os
+import socket
 import time
 from sys import exit
 
@@ -26,9 +27,13 @@ execfile(basepath+"/modules/threads.py")
 execfile(basepath+"/modules/httpd.py")
 
 
+# get the host IP address
+#
+ip = socket.gethostbyname(socket.gethostname())
+
 # initialize the HTTP server thread
 #
-h = HTTPServerThread("127.0.0.1", 8080)
+h = HTTPServerThread(ip, 80)
 
 # start the HTTP server thread
 #
