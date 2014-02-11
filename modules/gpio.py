@@ -2,23 +2,6 @@
 #
 # GPIO functions
 
-if( not debug ):
-	import RPi.GPIO as GPIO
-
-	# set the GPIO mode
-	#
-	GPIO.setmode(GPIO.BCM)
-
-	# the output pins (for the LEDs)
-	#
-	setGPIOPinOut(greenLightPin)
-	setGPIOPinOut(yellowLightPin)
-	setGPIOPinOut(redLightPin)
-
-	# the input pins (for the buttons)
-	#
-	setGPIOPinIn(redButton)
-	setGPIOPinIn(blackButton)
 
 # set a pin to output
 #
@@ -44,4 +27,28 @@ def getPinState(pin):
 		return GPIO.input(pin)
 
 	return None
+
+
+
+
+
+if( not debug ):
+        print "importing gpio"
+        import RPi.GPIO as GPIO
+
+        # set the GPIO mode
+        #
+        GPIO.setmode(GPIO.BCM)
+
+        # the output pins (for the LEDs)
+        #
+        setGPIOPinOut(greenLightPin)
+        setGPIOPinOut(yellowLightPin)
+        setGPIOPinOut(redLightPin)
+
+        # the input pins (for the buttons)
+        #
+        setGPIOPinIn(redButton)
+        setGPIOPinIn(blackButton)
+
 
