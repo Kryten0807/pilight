@@ -33,7 +33,8 @@ ip = socket.gethostbyname(socket.gethostname())
 
 # initialize the HTTP server thread
 #
-h = HTTPServerThread(ip, 80)
+h = HTTPServerThread("", 80)
+# h = HTTPServerThread(ip, 80)
 
 # start the HTTP server thread
 #
