@@ -2,6 +2,7 @@
 #
 # GPIO functions
 
+debug = False
 
 # set a pin to output
 #
